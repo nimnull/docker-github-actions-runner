@@ -9,7 +9,7 @@ on:
       - master
       - develop
   schedule:
-    - cron:  '0 22 * * *'
+    - cron:  '0 0 * * *'
 
 jobs:
   debian_base_tests:

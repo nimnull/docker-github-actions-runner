@@ -30,13 +30,6 @@
       ]
     },
     {
-      "category": "github",
-      "source": "script",
-      "packages": [
-        "github-cli"
-      ]
-    },
-    {
       "category": "yq",
       "source": "apt",
       "packages": [
