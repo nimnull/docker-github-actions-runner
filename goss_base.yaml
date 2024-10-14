@@ -13,10 +13,6 @@ package:
         installed: true
     pwsh:
         installed: false
-    python3:
-        installed: true
-    rsync:
-        installed: true
     ssh:
         installed: false
     sudo:
@@ -25,14 +21,10 @@ package:
         installed: true
     unzip:
         installed: true
-    wget:
-        installed: true
     yq:
         installed: false
 file:
   /usr/bin/gh:
-    exists: true
-  /usr/bin/nodejs:
     exists: true
   /usr/sbin/gosu:
     exists: true
