@@ -22,7 +22,7 @@ package:
     unzip:
         installed: true
     yq:
-        installed: false
+        installed: true
 file:
   /usr/bin/gh:
     exists: true
