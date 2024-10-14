@@ -23,6 +23,8 @@ package:
         installed: true
     yq:
         installed: true
+    python3:
+        installed: true        
 file:
   /usr/bin/gh:
     exists: false
