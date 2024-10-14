@@ -25,7 +25,7 @@ package:
         installed: true
 file:
   /usr/bin/gh:
-    exists: true
+    exists: false
   /usr/sbin/gosu:
     exists: true
   /usr/bin/dumb-init:
