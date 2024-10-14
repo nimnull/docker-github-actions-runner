@@ -21,7 +21,7 @@ jobs:
     strategy:
       matrix:
         release: [bookworm]
-        platform: [amd64, arm64, arm]
+        platform: [amd64, arm64]
       fail-fast: false
     steps:
       - name: Copy Repo Files
@@ -139,7 +139,7 @@ jobs:
           command: |
             docker buildx build \
               --file Dockerfile.debian-${{ matrix.release }} \
-              --platform linux/amd64,linux/arm64,linux/arm \
+              --platform linux/amd64,linux/arm64 \
               --tag ${{ env.ORG }}/github-runner:debian-${{ matrix.release }} \
               --tag ghcr.io/${{ github.repository }}:debian-${{ matrix.release }} \
               --push \

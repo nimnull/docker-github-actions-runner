@@ -30,6 +30,16 @@
       ]
     },
     {
+      "category": "python",
+      "source": "apt",
+      "packages": [
+        "python3",
+        "python3-pip",
+        "python3-setuptools",
+        "python3-venv"
+      ]
+    },
+    {
       "category": "yq",
       "source": "apt",
       "packages": [
