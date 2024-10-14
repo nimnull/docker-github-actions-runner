@@ -34,9 +34,13 @@ function install_github-cli() {
       | jq ".assets[] | select(.name == \"gh_${GH_CLI_VERSION}_linux_${DPKG_ARCH}.deb\")" \
       | jq -r '.browser_download_url')
 
-  curl -sSLo /tmp/ghcli.deb "${GH_CLI_DOWNLOAD_URL}"
-  apt-get -y install /tmp/ghcli.deb
-  rm /tmp/ghcli.deb
+  if [[ -n "${GH_CLI_DOWNLOAD_URL}" ]]; then
+    curl -sSLo /tmp/ghcli.deb "${GH_CLI_DOWNLOAD_URL}"
+    apt-get -y install /tmp/ghcli.deb
+    rm /tmp/ghcli.deb
+  else
+    echo "Can't detect GH_CLI_DOWNLOAD_URL"
+  fi
 }
 
 function install_yq() {
@@ -49,9 +53,13 @@ function install_yq() {
       | jq ".assets[] | select(.name == \"yq_linux_${DPKG_ARCH}.tar.gz\")" \
       | jq -r '.browser_download_url')
 
-  curl -s "${YQ_DOWNLOAD_URL}" -L -o /tmp/yq.tar.gz
-  tar -xzf /tmp/yq.tar.gz -C /tmp
-  mv "/tmp/yq_linux_${DPKG_ARCH}" /usr/local/bin/yq
+  if [[ -n "${YQ_DOWNLOAD_URL}" ]]; then
+    curl -s "${YQ_DOWNLOAD_URL}" -L -o /tmp/yq.tar.gz
+    tar -xzf /tmp/yq.tar.gz -C /tmp
+    mv "/tmp/yq_linux_${DPKG_ARCH}" /usr/local/bin/yq
+  else
+    echo "Can't detect YQ_DOWNLOAD_URL"
+  fi
 }
 
 function install_tools() {

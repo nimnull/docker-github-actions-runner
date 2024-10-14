@@ -31,7 +31,7 @@
     },
     {
       "category": "yq",
-      "source": "script",
+      "source": "apt",
       "packages": [
         "yq"
       ]
