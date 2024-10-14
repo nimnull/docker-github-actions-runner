@@ -3,12 +3,8 @@ package:
         installed: true
     docker:
         installed: false
-    docker-compose:
-        installed: false
     git:
         installed: true
-    git-lfs:
-        installed: false
     jq:
         installed: true
     lsb_release:
@@ -33,15 +29,6 @@ package:
         installed: true
     yq:
         installed: false
-    # Ubuntu Focal is the only one currently that doesnt have an official upstream skopeo/buildah/podman
-    {{ if not (eq .Vars.oscodename "focal") }}
-    skopeo:
-        installed: true
-    buildah:
-        installed: true
-    podman:
-        installed: true
-    {{ end }}
 file:
   /usr/bin/gh:
     exists: true
