@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        release: [bookworm, sid]
+        release: [bookworm]
         platform: [amd64, arm64, arm]
       fail-fast: false
     steps:
@@ -107,7 +107,7 @@ jobs:
     needs: debian_tests
     strategy:
       matrix:
-        release: [bookworm, sid]
+        release: [bookworm]
       fail-fast: false
     steps:
       - name: Copy Repo Files

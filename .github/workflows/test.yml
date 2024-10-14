@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        release: [bookworm, sid]
+        release: [bookworm]
         platform: [amd64, arm64]
       fail-fast: false
     steps:
