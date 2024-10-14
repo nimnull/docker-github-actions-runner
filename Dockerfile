@@ -3,6 +3,7 @@ FROM myoung34/github-runner-base:latest
 LABEL maintainer="myoung34@my.apsu.edu"
 
 ENV AGENT_TOOLSDIRECTORY=/opt/hostedtoolcache
+ENV PIP_BREAK_SYSTEM_PACKAGES 1
 RUN mkdir -p /opt/hostedtoolcache
 
 ARG GH_RUNNER_VERSION="2.320.0"
