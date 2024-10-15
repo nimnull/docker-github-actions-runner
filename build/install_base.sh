@@ -52,6 +52,10 @@ apt-get update
 install_tools_apt
 install_tools
 
+if [[ -f "/usr/bin/python3" ]]; then
+  ln -s /usr/bin/python3 /usr/bin/python
+fi
+
 setup_sudoers
 groupadd -g "$(group_id)" runner
 useradd -mr -d /home/runner -u "$(user_id)" -g "$(group_id)" runner

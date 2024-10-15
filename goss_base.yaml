@@ -28,6 +28,8 @@ package:
 file:
   /usr/bin/gh:
     exists: false
+  /usr/bin/python:
+    exists: true
   /usr/sbin/gosu:
     exists: true
   /usr/bin/dumb-init:
